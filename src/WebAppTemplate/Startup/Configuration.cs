@@ -8,7 +8,6 @@ namespace Dalion.WebAppTemplate.Startup {
                 .SetBasePath(Path.GetDirectoryName(settings.EntryAssembly.Location))
                 .AddJsonFile("appsettings.json", false, true)
                 .AddJsonFile($"appsettings.{settings.EnvironmentName}.json", true, true)
-                .AddUserSecrets<Program>()
                 .AddCommandLine(args)
                 .AddEnvironmentVariables()
                 .Build();

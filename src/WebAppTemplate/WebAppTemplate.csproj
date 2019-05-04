@@ -5,7 +5,6 @@
     <TargetLatestRuntimePatch>true</TargetLatestRuntimePatch>
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
     <RootNamespace>Dalion.WebAppTemplate</RootNamespace>
-    <UserSecretsId>a696471a-0078-4da7-a0b4-9e03d13fb1d3</UserSecretsId>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
     <Company>Dalion</Company>
