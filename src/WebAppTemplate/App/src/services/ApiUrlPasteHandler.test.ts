@@ -64,8 +64,8 @@ describe('ApiUrlPasteHandler', () => {
     });
 
     test("should not strip anythig from pasted text when the application url is not there", () => {
-      const input = 'https://dalionnotdalion.eu/webapptemplate/quote/param';
-      const expected = 'https://dalionnotdalion.eu/webapptemplate/quote/param';
+      const input = 'https://not-dalion.eu/webapptemplate/quote/param';
+      const expected = 'https://not-dalion.eu/webapptemplate/quote/param';
       return expect(apiUrlPasteHandler.sanitizePastedUrl(input))
         .toBe(expected);
     });
