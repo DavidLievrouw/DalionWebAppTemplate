@@ -56,7 +56,7 @@ namespace Dalion.Ringor.Api.Services {
             [Fact]
             public void ReportsExpectedProduct() {
                 var actual = _sut.Provide();
-                actual.Product.Should().Be("Ringor");
+                actual.Product.Should().Be("WebAppTemplate");
             }
 
             [Fact]
