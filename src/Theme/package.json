@@ -1,0 +1,17 @@
+{
+  "name": "webapptemplate-theme",
+  "version": "1.0.0",
+  "description": "Semantic UI theme for WebAppTemplate",
+  "author": "Dalion",
+  "dependencies": {
+    "semantic-ui": "^2.4.2"
+  },
+  "scripts": {
+    "build": "cd semantic && gulp build && cd .. && npm run copy",
+    "copy": "npm run copy-css && npm run copy-assets && npm run copy-js",
+    "copy-css": "xcopy \".\\semantic\\dist\\*.css\" \"..\\WebAppTemplate\\wwwroot\\css\\semantic-ui\\\" /Y",
+    "ensure-assets-directory": "if not exist \"..\\\WebAppTemplate\\wwwroot\\css\\semantic-ui\\themes\\default\\assets\\\" md \"..\\\WebAppTemplate\\wwwroot\\css\\semantic-ui\\themes\\default\\assets\\\"",
+    "copy-assets": "npm run ensure-assets-directory && xcopy \".\\semantic\\dist\\themes\\default\\assets\" \"..\\\WebAppTemplate\\wwwroot\\css\\semantic-ui\\themes\\default\\assets\\\" /Y /s",
+    "copy-js": "xcopy \".\\semantic\\dist\\*.js\" \"..\\\WebAppTemplate\\wwwroot\\js\\\" /Y"
+  }
+}
