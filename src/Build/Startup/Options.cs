@@ -47,7 +47,6 @@ namespace Dalion.WebAppTemplate.Build.Startup {
 
     public enum EnvironmentOptions {
         Development,
-        Staging,
         Production
     }
 }
