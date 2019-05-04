@@ -1,14 +1,14 @@
 ﻿using System.Net.Http;
 using System.Threading.Tasks;
-using Dalion.Ringor.Api.Models;
-using Dalion.Ringor.Api.Models.Links;
-using Dalion.Ringor.Api.Services;
+using Dalion.WebAppTemplate.Api.Models;
+using Dalion.WebAppTemplate.Api.Models.Links;
+using Dalion.WebAppTemplate.Api.Services;
 using FakeItEasy;
 using FluentAssertions;
 using Microsoft.AspNetCore.Mvc;
 using Xunit;
 
-namespace Dalion.Ringor.Api.Controllers {
+namespace Dalion.WebAppTemplate.Api.Controllers {
     public class DefaultControllerTests {
         private readonly IApiHomeResponseLinksCreatorFactory _apiHomeResponseLinksCreatorFactory;
         private readonly IApplicationInfoProvider _applicationInfoProvider;
@@ -26,10 +26,10 @@ namespace Dalion.Ringor.Api.Controllers {
                 _applicationInfo = new ApplicationInfo {
                     Version = "1.2.3",
                     Company = "Dalion",
-                    Product = "Ringor unit tests",
+                    Product = "WebAppTemplate unit tests",
                     UrlInfo = new ApplicationInfo.ApplicationUrlInfo {
                         SiteUrl = "https://www.dalion.eu/",
-                        AppUrl = "Ringor"
+                        AppUrl = "WebAppTemplate"
                     }
                 };
                 A.CallTo(() => _applicationInfoProvider.Provide())

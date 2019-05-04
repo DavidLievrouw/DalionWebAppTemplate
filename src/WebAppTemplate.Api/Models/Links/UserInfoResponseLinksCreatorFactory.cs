@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Dalion.Ringor.Api.Models.Links {
+namespace Dalion.WebAppTemplate.Api.Models.Links {
     public class UserInfoResponseLinksCreatorFactory : IUserInfoResponseLinksCreatorFactory {
         private readonly IHyperlinkFactory _hyperlinkFactory;
 

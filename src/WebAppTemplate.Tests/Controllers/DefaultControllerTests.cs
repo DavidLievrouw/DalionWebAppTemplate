@@ -1,13 +1,13 @@
 ﻿using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
-using Dalion.Ringor.Startup;
+using Dalion.WebAppTemplate.Startup;
 using FluentAssertions;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Xunit;
 
-namespace Dalion.Ringor.Controllers {
+namespace Dalion.WebAppTemplate.Controllers {
     public class DefaultControllerTests {
         private readonly DefaultController _sut;
         private readonly string _url;

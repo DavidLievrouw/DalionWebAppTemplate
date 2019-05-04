@@ -1,6 +1,6 @@
-﻿using Dalion.Ringor.Api.Models;
+﻿using Dalion.WebAppTemplate.Api.Models;
 
-namespace Dalion.Ringor.Api.Services {
+namespace Dalion.WebAppTemplate.Api.Services {
     public interface IApplicationInfoProvider {
         ApplicationInfo Provide();
     }

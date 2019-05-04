@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Serilog;
 using Xunit;
 
-namespace Dalion.Ringor.Logging {
+namespace Dalion.WebAppTemplate.Logging {
     public class UnhandledExceptionLoggingMiddlewareTests {
         private readonly ILogger _logger;
 

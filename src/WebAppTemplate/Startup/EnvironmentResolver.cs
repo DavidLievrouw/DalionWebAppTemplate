@@ -2,7 +2,7 @@
 using System.Linq;
 using Microsoft.AspNetCore.Hosting;
 
-namespace Dalion.Ringor.Startup {
+namespace Dalion.WebAppTemplate.Startup {
     internal class EnvironmentResolver {
         public string ResolveEnvironment(string[] args) {
             var environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");

@@ -1,4 +1,4 @@
-﻿namespace Dalion.Ringor.Configuration {
+﻿namespace Dalion.WebAppTemplate.Configuration {
     public class NetworkSettings {
         public int HttpsPort { get; set; }
     }

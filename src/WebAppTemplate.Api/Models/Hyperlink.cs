@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Net.Http;
 
-namespace Dalion.Ringor.Api.Models {
+namespace Dalion.WebAppTemplate.Api.Models {
     public class Hyperlink<TRel> : IEquatable<Hyperlink<TRel>>
         where TRel : struct, IConvertible {
 

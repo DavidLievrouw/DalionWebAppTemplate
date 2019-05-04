@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using KellermanSoftware.CompareNetObjects;
 
-namespace Dalion.Ringor {
+namespace Dalion.WebAppTemplate {
     public partial class ExtensionsForT {
         public static ComparisonResult CompareTo<T>(this T first, T second) {
             return CompareTo(first, second, false, null);

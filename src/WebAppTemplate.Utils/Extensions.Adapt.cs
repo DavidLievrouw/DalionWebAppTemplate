@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Dalion.Ringor.Utils {
+namespace Dalion.WebAppTemplate.Utils {
     public static partial class Extensions {
         public static TOut? Adapt<TIn, TOut>(this IAdapter<TIn, TOut> adapter, TIn? input)
             where TIn : struct

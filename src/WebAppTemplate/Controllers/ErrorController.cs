@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Linq;
 using System.Text.RegularExpressions;
-using Dalion.Ringor.Filters;
-using Dalion.Ringor.Utils;
+using Dalion.WebAppTemplate.Filters;
+using Dalion.WebAppTemplate.Utils;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Dalion.Ringor.Controllers {
+namespace Dalion.WebAppTemplate.Controllers {
     [AllowAnonymous]
     [Route("error")]
     public class ErrorController : Controller {

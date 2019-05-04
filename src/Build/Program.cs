@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using Cake.Frosting;
 using CommandLine;
-using Dalion.Ringor.Build.Startup;
+using Dalion.WebAppTemplate.Build.Startup;
 
-namespace Dalion.Ringor.Build {
+namespace Dalion.WebAppTemplate.Build {
     public class Program {
         public static int Main(string[] args) {
             using (new TemporaryConsoleColor(ConsoleColor.Green)) {

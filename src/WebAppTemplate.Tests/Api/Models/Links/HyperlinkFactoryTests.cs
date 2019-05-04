@@ -4,7 +4,7 @@ using FakeItEasy;
 using FluentAssertions;
 using Xunit;
 
-namespace Dalion.Ringor.Api.Models.Links {
+namespace Dalion.WebAppTemplate.Api.Models.Links {
     public class HyperlinkFactoryTests {
         private readonly IApplicationUriResolver _applicationUriResolver;
         private readonly HyperlinkFactory _sut;

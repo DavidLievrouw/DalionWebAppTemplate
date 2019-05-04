@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.Routing;
 using Xunit;
 
-namespace Dalion.Ringor.Filters {
+namespace Dalion.WebAppTemplate.Filters {
     public class ReportsResponseTypeAttributeTests {
         private readonly string _responseType;
         private readonly ReportsResponseTypeAttribute.ReportsResponseTypeFilter _sut;

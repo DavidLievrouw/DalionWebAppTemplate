@@ -15,7 +15,7 @@ using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.FileProviders;
 using Xunit;
 
-namespace Dalion.Ringor.Filters {
+namespace Dalion.WebAppTemplate.Filters {
     public class IsSpaViewFilterTests {
         private readonly IFileProvider _fileProvider;
         private readonly IsSpaViewAttribute.IsSpaViewFilter _sut;
@@ -58,7 +58,7 @@ namespace Dalion.Ringor.Filters {
                 var actualViewDataDic = _context.Result.As<ViewResult>().ViewData;
                 actualViewDataDic.Should().ContainKey("Dalion-Scripts");
                 actualViewDataDic["Dalion-Scripts"].Should().BeEquivalentTo(new[] {
-                    "App/ringor-bundle.js"
+                    "App/webapptemplate-bundle.js"
                 });
             }
 
@@ -70,7 +70,7 @@ namespace Dalion.Ringor.Filters {
                 A.CallTo(() => _fileProvider.GetFileInfo(A<string>._))
                     .ReturnsLazily(call => new FakeFileInfo(
                         call.GetArgument<string>(0),
-                        call.GetArgument<string>(0).StartsWith("ringor-bundle")));
+                        call.GetArgument<string>(0).StartsWith("webapptemplate-bundle")));
 
                 _sut.OnActionExecuted(_context);
 
@@ -92,7 +92,7 @@ namespace Dalion.Ringor.Filters {
                 var actualViewDataDic = _context.Result.As<ViewResult>().ViewData;
                 actualViewDataDic.Should().ContainKey("Dalion-Styles");
                 actualViewDataDic["Dalion-Styles"].Should().BeEquivalentTo(new[] {
-                    "App/ringor-bundle.css"
+                    "App/webapptemplate-bundle.css"
                 });
             }
 
@@ -104,7 +104,7 @@ namespace Dalion.Ringor.Filters {
                 A.CallTo(() => _fileProvider.GetFileInfo(A<string>._))
                     .ReturnsLazily(call => new FakeFileInfo(
                         call.GetArgument<string>(0),
-                        call.GetArgument<string>(0).StartsWith("ringor-bundle")));
+                        call.GetArgument<string>(0).StartsWith("webapptemplate-bundle")));
 
                 _sut.OnActionExecuted(_context);
 

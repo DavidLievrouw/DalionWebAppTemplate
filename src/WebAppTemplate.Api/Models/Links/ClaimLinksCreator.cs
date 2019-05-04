@@ -3,7 +3,7 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace Dalion.Ringor.Api.Models.Links {
+namespace Dalion.WebAppTemplate.Api.Models.Links {
     public class ClaimLinksCreator : ILinksCreator<Claim> {
         private readonly IHyperlinkFactory _hyperlinkFactory;
 

@@ -4,9 +4,9 @@ using Cake.Common.IO;
 using Cake.Common.Tools.DotNetCore;
 using Cake.Common.Tools.DotNetCore.Test;
 using Cake.Frosting;
-using Dalion.Ringor.Build.Tasks.Restore;
+using Dalion.WebAppTemplate.Build.Tasks.Restore;
 
-namespace Dalion.Ringor.Build.Tasks.Test {
+namespace Dalion.WebAppTemplate.Build.Tasks.Test {
     [TaskName(nameof(UnitTestCSharp))]
     [Dependency(typeof(InitVersion))]
     [Dependency(typeof(RestorePackages))]
@@ -28,7 +28,7 @@ namespace Dalion.Ringor.Build.Tasks.Test {
                 var mainTestSettings = new DotNetCoreTestSettings {
                     Configuration = context.App.Arguments.Configuration,
                     Verbosity = context.App.Arguments.DotNetCoreVerbosity,
-                    OutputDirectory = context.App.FileSystem.CSharpUnitTestTargetDirectory.FullPath + "/Ringor/" + fileName,
+                    OutputDirectory = context.App.FileSystem.CSharpUnitTestTargetDirectory.FullPath + "/WebAppTemplate/" + fileName,
                     Logger = "trx;LogFileName=" + context.App.FileSystem.CSharpUnitTestTargetDirectory.FullPath + "\\UnitTest-" + fileName + ".trx",
                     NoRestore = true
                 };

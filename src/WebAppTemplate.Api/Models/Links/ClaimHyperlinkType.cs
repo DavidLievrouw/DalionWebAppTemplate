@@ -1,4 +1,4 @@
-﻿namespace Dalion.Ringor.Api.Models.Links {
+﻿namespace Dalion.WebAppTemplate.Api.Models.Links {
     public enum ClaimHyperlinkType {
         EnumerateAllClaimsOfThisType,
         GetUserInfo

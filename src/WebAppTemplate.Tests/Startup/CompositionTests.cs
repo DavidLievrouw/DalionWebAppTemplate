@@ -1,11 +1,11 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
-using Dalion.Ringor.Api.Controllers;
-using Dalion.Ringor.Api.Models.Links;
-using Dalion.Ringor.Api.Services;
-using Dalion.Ringor.Configuration;
-using Dalion.Ringor.Utils;
+using Dalion.WebAppTemplate.Api.Controllers;
+using Dalion.WebAppTemplate.Api.Models.Links;
+using Dalion.WebAppTemplate.Api.Services;
+using Dalion.WebAppTemplate.Configuration;
+using Dalion.WebAppTemplate.Utils;
 using FluentAssertions;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -15,7 +15,7 @@ using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Options;
 using Xunit;
 
-namespace Dalion.Ringor.Startup {
+namespace Dalion.WebAppTemplate.Startup {
     public class CompositionTests : IDisposable {
         private readonly ServiceProvider _serviceProvider;
         private readonly IConfiguration _configuration;

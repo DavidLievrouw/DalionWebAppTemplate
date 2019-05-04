@@ -1,7 +1,7 @@
 using System;
-using Dalion.Ringor.Utils;
+using Dalion.WebAppTemplate.Utils;
 
-namespace Dalion.Ringor.Logging {
+namespace Dalion.WebAppTemplate.Logging {
     public class SerilogLogger<TContext> : ILogger<TContext>, IDisposable {
         private readonly Serilog.ILogger _logger;
 

@@ -1,10 +1,10 @@
 ﻿using System;
-using Dalion.Ringor.Api.Services;
+using Dalion.WebAppTemplate.Api.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Dalion.Ringor.Filters {
+namespace Dalion.WebAppTemplate.Filters {
     public class ReportsApplicationInfoAttribute : Attribute, IFilterFactory {
         public IFilterMetadata CreateInstance(IServiceProvider serviceProvider) {
             return new ReportsApplicationInfoFilter(serviceProvider.GetRequiredService<IApplicationInfoProvider>());

@@ -1,7 +1,7 @@
 ﻿using System;
-using Dalion.Ringor.Api.Controllers;
-using Dalion.Ringor.Configuration;
-using Dalion.Ringor.Serialization;
+using Dalion.WebAppTemplate.Api.Controllers;
+using Dalion.WebAppTemplate.Configuration;
+using Dalion.WebAppTemplate.Serialization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 
-namespace Dalion.Ringor.Startup {
+namespace Dalion.WebAppTemplate.Startup {
     public class WebHostStartup : IStartup {
         private readonly IHostingEnvironment _environment;
 

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Dalion.Ringor.Configuration {
+namespace Dalion.WebAppTemplate.Configuration {
     public class AuthenticationSettings {
         public Uri SignInEndpoint { get; set; }
         public string Tenant { get; set; }

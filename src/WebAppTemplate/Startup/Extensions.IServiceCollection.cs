@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using Dalion.Ringor.Api.Controllers;
-using Dalion.Ringor.Api.Models.Links;
-using Dalion.Ringor.Api.Security;
-using Dalion.Ringor.Api.Services;
-using Dalion.Ringor.Api.Swagger;
-using Dalion.Ringor.Configuration;
-using Dalion.Ringor.Logging;
-using Dalion.Ringor.Serialization;
-using Dalion.Ringor.Utils;
+using Dalion.WebAppTemplate.Api.Controllers;
+using Dalion.WebAppTemplate.Api.Models.Links;
+using Dalion.WebAppTemplate.Api.Security;
+using Dalion.WebAppTemplate.Api.Services;
+using Dalion.WebAppTemplate.Api.Swagger;
+using Dalion.WebAppTemplate.Configuration;
+using Dalion.WebAppTemplate.Logging;
+using Dalion.WebAppTemplate.Serialization;
+using Dalion.WebAppTemplate.Utils;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -23,7 +23,7 @@ using Serilog;
 using Swashbuckle.AspNetCore.Swagger;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
-namespace Dalion.Ringor.Startup {
+namespace Dalion.WebAppTemplate.Startup {
     internal static partial class Extensions {
         public static TSettings ConfigureSettings<TSettings>(this IServiceCollection services, IConfigurationSection configSection, Func<TSettings> factory) where TSettings : class {
             if (services == null) throw new ArgumentNullException(nameof(services));

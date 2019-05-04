@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Net.Http;
-using Dalion.Ringor.Utils;
+using Dalion.WebAppTemplate.Utils;
 
-namespace Dalion.Ringor.Api.Models.Links {
+namespace Dalion.WebAppTemplate.Api.Models.Links {
     public class HyperlinkFactory : IHyperlinkFactory {
         private readonly IApplicationUriResolver _applicationUriResolver;
 

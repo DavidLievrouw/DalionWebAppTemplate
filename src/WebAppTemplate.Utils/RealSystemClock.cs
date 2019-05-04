@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Dalion.Ringor.Utils {
+namespace Dalion.WebAppTemplate.Utils {
     public class RealSystemClock : ISystemClock {
         private readonly ILocalTimeConverter _localTimeConverter;
 

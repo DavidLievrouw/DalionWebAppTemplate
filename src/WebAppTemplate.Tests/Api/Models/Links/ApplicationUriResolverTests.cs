@@ -1,10 +1,10 @@
 ﻿using System;
-using Dalion.Ringor.Api.Services;
+using Dalion.WebAppTemplate.Api.Services;
 using FakeItEasy;
 using FluentAssertions;
 using Xunit;
 
-namespace Dalion.Ringor.Api.Models.Links {
+namespace Dalion.WebAppTemplate.Api.Models.Links {
     public class ApplicationUriResolverTests {
         private readonly IApplicationInfoProvider _applicationInfoProvider;
         private readonly ApplicationUriResolver _sut;

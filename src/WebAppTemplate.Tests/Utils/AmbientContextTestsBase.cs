@@ -4,7 +4,7 @@ using FakeItEasy;
 using FluentAssertions;
 using Xunit;
 
-namespace Dalion.Ringor.Utils {
+namespace Dalion.WebAppTemplate.Utils {
     public abstract class AmbientContextTestsBase<TAmbientContext, TValue>
         where TAmbientContext : AmbientContext<TValue>
         where TValue : class {

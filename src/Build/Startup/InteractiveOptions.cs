@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace Dalion.Ringor.Build.Startup {
+namespace Dalion.WebAppTemplate.Build.Startup {
     public class InteractiveOptions {
         public static Options Prompt(Options options) {
             var possibleActions = new (string Label, Action Invoke)[] {

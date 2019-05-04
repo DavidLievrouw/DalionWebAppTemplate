@@ -1,7 +1,7 @@
 ﻿using FluentAssertions;
 using Xunit;
 
-namespace Dalion.Ringor.Api.Models.Links {
+namespace Dalion.WebAppTemplate.Api.Models.Links {
     public class UserInfoResponseLinksCreatorFactoryTests {
         private readonly IHyperlinkFactory _hyperlinkFactory;
         private readonly UserInfoResponseLinksCreatorFactory _sut;

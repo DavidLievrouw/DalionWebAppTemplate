@@ -16,7 +16,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "Ringor": {
+    "WebAppTemplate": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "https://localhost:5000",

@@ -3,7 +3,7 @@ using System.Net.Http;
 using FluentAssertions;
 using Xunit;
 
-namespace Dalion.Ringor.Api.Models {
+namespace Dalion.WebAppTemplate.Api.Models {
     public class HyperlinkTests {
         public class Construction : HyperlinkTests {
             [Fact]

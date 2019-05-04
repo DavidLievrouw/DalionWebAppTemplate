@@ -3,7 +3,7 @@ using Cake.Common.IO;
 using Cake.Compression;
 using Cake.Frosting;
 
-namespace Dalion.Ringor.Build.Tasks {
+namespace Dalion.WebAppTemplate.Build.Tasks {
     [TaskName(nameof(CreateRelease))]
     [Dependency(typeof(InitVersion))]
     [Dependency(typeof(Publish.Publish))]

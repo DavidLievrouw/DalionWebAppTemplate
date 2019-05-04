@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using Dalion.Ringor.Api.Models;
-using Dalion.Ringor.Api.Services;
+using Dalion.WebAppTemplate.Api.Models;
+using Dalion.WebAppTemplate.Api.Services;
 using FakeItEasy;
 using FluentAssertions;
 using Microsoft.AspNetCore.Http;
@@ -14,7 +14,7 @@ using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Microsoft.AspNetCore.Routing;
 using Xunit;
 
-namespace Dalion.Ringor.Filters {
+namespace Dalion.WebAppTemplate.Filters {
     public class ReportsApplicationInfoFilterTests {
         private readonly IApplicationInfoProvider _applicationInfoProvider;
         private readonly ReportsApplicationInfoAttribute.ReportsApplicationInfoFilter _sut;

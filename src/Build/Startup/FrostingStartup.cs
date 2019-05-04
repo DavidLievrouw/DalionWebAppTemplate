@@ -1,6 +1,6 @@
 ﻿using Cake.Frosting;
 
-namespace Dalion.Ringor.Build.Startup {
+namespace Dalion.WebAppTemplate.Build.Startup {
     public class FrostingStartup : IFrostingStartup {
         public void Configure(ICakeServices services) {
             services.UseContext<Context>();

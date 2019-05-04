@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 
-namespace Dalion.Ringor.Startup {
+namespace Dalion.WebAppTemplate.Startup {
     internal class BootstrapperSettings {
         public string EnvironmentName { get; set; }
         public bool UseDetailedErrors { get; set; }

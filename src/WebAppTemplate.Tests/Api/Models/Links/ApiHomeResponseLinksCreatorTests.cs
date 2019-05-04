@@ -5,7 +5,7 @@ using FakeItEasy;
 using FluentAssertions;
 using Xunit;
 
-namespace Dalion.Ringor.Api.Models.Links {
+namespace Dalion.WebAppTemplate.Api.Models.Links {
     public class ApiHomeResponseLinksCreatorTests {
         private readonly IHyperlinkFactory _hyperlinkFactory;
         private readonly ApiHomeResponseLinksCreator _sut;
@@ -23,10 +23,10 @@ namespace Dalion.Ringor.Api.Models.Links {
                     ApplicationInfo = new ApplicationInfo {
                         Version = "1.2.3",
                         Company = "Dalion",
-                        Product = "Ringor unit tests",
+                        Product = "WebAppTemplate unit tests",
                         UrlInfo = new ApplicationInfo.ApplicationUrlInfo {
                             SiteUrl = "https://www.dalion.eu/",
-                            AppUrl = "Ringor"
+                            AppUrl = "WebAppTemplate"
                         }
                     }
                 };
@@ -52,10 +52,10 @@ namespace Dalion.Ringor.Api.Models.Links {
                     ApplicationInfo = new ApplicationInfo {
                         Version = "1.2.3",
                         Company = "Dalion",
-                        Product = "Ringor unit tests",
+                        Product = "WebAppTemplate unit tests",
                         UrlInfo = new ApplicationInfo.ApplicationUrlInfo {
                             SiteUrl = "https://www.dalion.eu/",
-                            AppUrl = "Ringor"
+                            AppUrl = "WebAppTemplate"
                         }
                     },
                     Links = new[] {

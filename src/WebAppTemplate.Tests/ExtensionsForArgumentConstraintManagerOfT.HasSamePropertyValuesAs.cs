@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using FakeItEasy;
 using KellermanSoftware.CompareNetObjects;
 
-namespace Dalion.Ringor {
+namespace Dalion.WebAppTemplate {
     public static partial class ExtensionsForArgumentConstraintManagerOfT {
         public static T HasSamePropertyValuesAs<T>(this IArgumentConstraintManager<T> manager, object value) {
             return HasSamePropertyValuesAs(manager, value, false, null);

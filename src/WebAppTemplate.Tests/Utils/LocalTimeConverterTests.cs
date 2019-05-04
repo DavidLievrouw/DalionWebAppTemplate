@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using FluentAssertions;
 using Xunit;
 
-namespace Dalion.Ringor.Utils {
+namespace Dalion.WebAppTemplate.Utils {
     public class LocalTimeConverterTests {
         public class Construction : LocalTimeConverterTests {
             [Fact]

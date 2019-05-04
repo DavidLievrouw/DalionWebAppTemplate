@@ -1,7 +1,7 @@
 using Cake.Common.IO;
 using Cake.Frosting;
 
-namespace Dalion.Ringor.Build.Tasks.Publish {
+namespace Dalion.WebAppTemplate.Build.Tasks.Publish {
     [TaskName(nameof(PublishClean))]
     public sealed class PublishClean : FrostingTask<Context> {
         public override void Run(Context context) {

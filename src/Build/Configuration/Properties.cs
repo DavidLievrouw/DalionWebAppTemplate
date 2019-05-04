@@ -5,7 +5,7 @@ using System.Reflection;
 using System.Text;
 using Cake.Core;
 
-namespace Dalion.Ringor.Build.Configuration {
+namespace Dalion.WebAppTemplate.Build.Configuration {
     public interface IProperties {
         ICakeContext Context { get; }
         IEnumerable<PropertyInfo> PublicProperties { get; }

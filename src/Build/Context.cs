@@ -1,8 +1,8 @@
 using Cake.Core;
 using Cake.Frosting;
-using Dalion.Ringor.Build.Configuration;
+using Dalion.WebAppTemplate.Build.Configuration;
 
-namespace Dalion.Ringor.Build {
+namespace Dalion.WebAppTemplate.Build {
     public class Context : FrostingContext {
         public Context(ICakeContext context) : base(context) {
             App = new AppProperties(context);

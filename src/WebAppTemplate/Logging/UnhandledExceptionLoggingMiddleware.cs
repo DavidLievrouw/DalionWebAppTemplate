@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Serilog;
 
-namespace Dalion.Ringor.Logging {
+namespace Dalion.WebAppTemplate.Logging {
     public class UnhandledExceptionLoggingMiddleware {
         private readonly ILogger _logger;
         private readonly RequestDelegate _next;

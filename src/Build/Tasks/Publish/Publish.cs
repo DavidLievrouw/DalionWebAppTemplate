@@ -1,6 +1,6 @@
 using Cake.Frosting;
 
-namespace Dalion.Ringor.Build.Tasks.Publish {
+namespace Dalion.WebAppTemplate.Build.Tasks.Publish {
     [TaskName(nameof(Publish))]
     [Dependency(typeof(InitVersion))]
     [Dependency(typeof(PublishClean))]

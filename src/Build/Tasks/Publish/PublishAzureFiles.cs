@@ -4,9 +4,9 @@ using Cake.Common.Tools.DotNetCore.MSBuild;
 using Cake.Common.Tools.DotNetCore.Publish;
 using Cake.Core;
 using Cake.Frosting;
-using Dalion.Ringor.Build.Tasks.Restore;
+using Dalion.WebAppTemplate.Build.Tasks.Restore;
 
-namespace Dalion.Ringor.Build.Tasks.Publish {
+namespace Dalion.WebAppTemplate.Build.Tasks.Publish {
     [TaskName(nameof(PublishAzureFiles))]
     [Dependency(typeof(RestorePackages))]
     public sealed class PublishAzureFiles : FrostingTask<Context> {

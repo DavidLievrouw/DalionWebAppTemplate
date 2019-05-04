@@ -3,7 +3,7 @@ using System.Text.RegularExpressions;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.ActionConstraints;
 
-namespace Dalion.Ringor.Constraints {
+namespace Dalion.WebAppTemplate.Constraints {
     public class GetSpaActionConstraintAttribute : Attribute, IActionConstraint {
         private static readonly Regex SpaPathRegex = new Regex(@"^$|^/*((?!(/(?!\?).)+|(api(?!nav))|(swagger(?!ui))|.*\.+.+).)*$", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 

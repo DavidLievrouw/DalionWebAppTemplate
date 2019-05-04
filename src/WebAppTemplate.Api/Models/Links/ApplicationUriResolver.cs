@@ -1,7 +1,7 @@
 ﻿using System;
-using Dalion.Ringor.Api.Services;
+using Dalion.WebAppTemplate.Api.Services;
 
-namespace Dalion.Ringor.Api.Models.Links {
+namespace Dalion.WebAppTemplate.Api.Models.Links {
     public class ApplicationUriResolver : IApplicationUriResolver {
         private readonly IApplicationInfoProvider _applicationInfoProvider;
 

@@ -2,7 +2,7 @@ using System;
 using Cake.Common.Tools.DotNetCore;
 using Cake.Core;
 
-namespace Dalion.Ringor.Build.Configuration.Arguments {
+namespace Dalion.WebAppTemplate.Build.Configuration.Arguments {
     public class ArgumentsProperties : Properties<ArgumentsProperties> {
         private readonly AppProperties _container;
 

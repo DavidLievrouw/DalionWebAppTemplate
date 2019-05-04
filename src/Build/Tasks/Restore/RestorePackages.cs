@@ -1,6 +1,6 @@
 using Cake.Frosting;
 
-namespace Dalion.Ringor.Build.Tasks.Restore {
+namespace Dalion.WebAppTemplate.Build.Tasks.Restore {
     [TaskName(nameof(RestorePackages))]
     [Dependency(typeof(RestorePackagesCSharp))]
     [Dependency(typeof(RestorePackagesNpm))]

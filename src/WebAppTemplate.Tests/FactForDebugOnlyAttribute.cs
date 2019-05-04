@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics;
 using Xunit;
 
-namespace Dalion.Ringor {
+namespace Dalion.WebAppTemplate {
     public sealed class FactForDebugOnlyAttribute : FactAttribute {
         public FactForDebugOnlyAttribute() {
             if (!Debugger.IsAttached) {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Dalion.Ringor.Utils {
+namespace Dalion.WebAppTemplate.Utils {
     public static partial class Extensions {
         public static Uri WithRelativePath(this Uri baseUri, string relativePath) {
             if (baseUri == null) throw new ArgumentNullException(nameof(baseUri));

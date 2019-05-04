@@ -1,11 +1,11 @@
-@using Dalion.Ringor
-@using Dalion.Ringor.Api.Models
-@using Dalion.Ringor.Utils
+@using Dalion.WebAppTemplate
+@using Dalion.WebAppTemplate.Api.Models
+@using Dalion.WebAppTemplate.Utils
 @using Microsoft.AspNetCore.Http.Features
 @inject IJsonSerializer JsonSerializer;
 
 @{
-  var productName = "Ringor";
+  var productName = "WebAppTemplate";
   var pageTitle = ViewData["Title"];
   var title = string.Join(" - ", new[] {productName, pageTitle}.Where(s => s != null));
 

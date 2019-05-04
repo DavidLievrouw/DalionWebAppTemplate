@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using Microsoft.Extensions.Configuration;
 
-namespace Dalion.Ringor.Startup {
+namespace Dalion.WebAppTemplate.Startup {
     internal static class Configuration {
         public static IConfigurationRoot BuildConfiguration(BootstrapperSettings settings, string[] args) {
             return new ConfigurationBuilder()

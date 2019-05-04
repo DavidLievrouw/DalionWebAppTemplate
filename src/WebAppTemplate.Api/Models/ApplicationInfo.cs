@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Dalion.Ringor.Api.Models {
+namespace Dalion.WebAppTemplate.Api.Models {
     public class ApplicationInfo {
         public string Company { get; set; }
         public string Product { get; set; }

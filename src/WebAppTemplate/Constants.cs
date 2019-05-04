@@ -1,4 +1,4 @@
-﻿namespace Dalion.Ringor {
+﻿namespace Dalion.WebAppTemplate {
     public static class Constants {
         public static class Headers {
             public const string ResponseType = "Dalion-ResponseType";

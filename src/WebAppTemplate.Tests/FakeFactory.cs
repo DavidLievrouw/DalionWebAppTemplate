@@ -1,6 +1,6 @@
 ﻿using FakeItEasy;
 
-namespace Dalion.Ringor {
+namespace Dalion.WebAppTemplate {
     public static class FakeFactory {
         public static void Create<T1>(out T1 fake1)
             where T1 : class {

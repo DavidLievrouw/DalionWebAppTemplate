@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
-using Dalion.Ringor.Utils;
+using Dalion.WebAppTemplate.Utils;
 using FakeItEasy;
 using FluentAssertions;
 using Xunit;
 
-namespace Dalion.Ringor.Api.Models.Links {
+namespace Dalion.WebAppTemplate.Api.Models.Links {
     public partial class ExtensionsTests {
         public class CreateLinksFor : ExtensionsTests {
             private readonly ILinksCreator<ApiHomeResponse> _linksCreator;

@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
-namespace Dalion.Ringor.Filters {
+namespace Dalion.WebAppTemplate.Filters {
     public class ReportsResponseTypeAttribute : Attribute, IFilterFactory {
         private readonly string _responseType;
 

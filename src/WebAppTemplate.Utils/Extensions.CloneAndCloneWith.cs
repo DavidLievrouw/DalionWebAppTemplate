@@ -2,7 +2,7 @@ using System;
 using System.Linq.Expressions;
 using System.Reflection;
 
-namespace Dalion.Ringor.Utils {
+namespace Dalion.WebAppTemplate.Utils {
     public static partial class Extensions {
         /// <summary>
         ///     Create a shallow clone of the specified subject, and change the value of the specified property.

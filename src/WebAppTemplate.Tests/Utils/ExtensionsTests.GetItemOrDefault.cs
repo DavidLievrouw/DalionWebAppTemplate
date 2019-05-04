@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using FluentAssertions;
 using Xunit;
 
-namespace Dalion.Ringor.Utils {
+namespace Dalion.WebAppTemplate.Utils {
     public partial class ExtensionsTests {
         public class GetItemOrDefault : ExtensionsTests {
             private readonly Dictionary<string, int> _dic;

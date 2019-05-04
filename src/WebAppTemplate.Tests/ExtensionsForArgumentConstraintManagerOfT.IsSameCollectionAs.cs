@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using FakeItEasy;
 using KellermanSoftware.CompareNetObjects;
 
-namespace Dalion.Ringor {
+namespace Dalion.WebAppTemplate {
     public static partial class ExtensionsForArgumentConstraintManagerOfT {
         public static IEnumerable<T> IsSameCollectionAs<T>(this IArgumentConstraintManager<IEnumerable<T>> manager, IEnumerable<T> value) {
             return IsSameCollectionAs(manager, value, config => { });

@@ -1,11 +1,11 @@
-﻿using Dalion.Ringor.Configuration;
+﻿using Dalion.WebAppTemplate.Configuration;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Dalion.Ringor.Startup {
+namespace Dalion.WebAppTemplate.Startup {
     internal static class Composition {
         public static void ConfigureServices(
             IServiceCollection services,

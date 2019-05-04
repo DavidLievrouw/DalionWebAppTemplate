@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using KellermanSoftware.CompareNetObjects;
 
-namespace Dalion.Ringor {
+namespace Dalion.WebAppTemplate {
     public partial class ExtensionsForT {
         public static bool IsSameCollectionAs<T>(this IEnumerable<T> first, IEnumerable<T> second) {
             return IsSameCollectionAs(first, second, config => { });

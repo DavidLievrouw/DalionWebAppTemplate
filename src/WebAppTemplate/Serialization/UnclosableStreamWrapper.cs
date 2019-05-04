@@ -1,7 +1,7 @@
 using System;
 using System.IO;
 
-namespace Dalion.Ringor.Serialization {
+namespace Dalion.WebAppTemplate.Serialization {
     internal class UnclosableStreamWrapper : Stream, IDisposable {
         private readonly Stream _baseStream;
 

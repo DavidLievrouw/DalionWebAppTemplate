@@ -2,8 +2,8 @@
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
-using Dalion.Ringor.Startup;
-using Dalion.Ringor.Utils;
+using Dalion.WebAppTemplate.Startup;
+using Dalion.WebAppTemplate.Utils;
 using FakeItEasy;
 using FluentAssertions;
 using Microsoft.AspNetCore.Diagnostics;
@@ -12,7 +12,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Xunit;
 
-namespace Dalion.Ringor.Controllers {
+namespace Dalion.WebAppTemplate.Controllers {
     public class ErrorControllerTests {
         private readonly ILogger<ErrorController> _logger;
         private readonly ErrorController _sut;
@@ -161,11 +161,11 @@ namespace Dalion.Ringor.Controllers {
             [Fact]
             public void AddsOriginalPathBaseToViewData() {
                 A.CallTo(() => _feature.OriginalPathBase)
-                    .Returns("/RingorApp");
+                    .Returns("/WebAppTemplate");
 
                 var actual = _sut.CatchAllStatusCodes(_status, _path, _query);
 
-                actual.As<ViewResult>().ViewData.Should().Contain("Dalion-ErrorPathBase", "/RingorApp");
+                actual.As<ViewResult>().ViewData.Should().Contain("Dalion-ErrorPathBase", "/WebAppTemplate");
             }
 
             [Theory]

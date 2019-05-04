@@ -1,9 +1,9 @@
-using Dalion.Ringor.Constraints;
-using Dalion.Ringor.Filters;
+using Dalion.WebAppTemplate.Constraints;
+using Dalion.WebAppTemplate.Filters;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Dalion.Ringor.Controllers {
+namespace Dalion.WebAppTemplate.Controllers {
     [AllowAnonymous]
     [Route("")]
     public class DefaultController : Controller {

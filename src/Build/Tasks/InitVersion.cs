@@ -2,7 +2,7 @@
 using Cake.FileHelpers;
 using Cake.Frosting;
 
-namespace Dalion.Ringor.Build.Tasks {
+namespace Dalion.WebAppTemplate.Build.Tasks {
     [TaskName(nameof(InitVersion))]
     public sealed class InitVersion : FrostingTask<Context> {
         public override void Run(Context context) {

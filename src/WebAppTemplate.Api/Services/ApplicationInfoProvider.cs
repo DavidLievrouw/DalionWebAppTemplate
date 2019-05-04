@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Reflection;
-using Dalion.Ringor.Api.Models;
+using Dalion.WebAppTemplate.Api.Models;
 using Microsoft.AspNetCore.Http;
 
-namespace Dalion.Ringor.Api.Services {
+namespace Dalion.WebAppTemplate.Api.Services {
     public class ApplicationInfoProvider : IApplicationInfoProvider {
         private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly Assembly _entryAssembly;

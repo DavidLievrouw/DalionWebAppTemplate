@@ -1,8 +1,8 @@
 using System;
-using Dalion.Ringor.Utils;
+using Dalion.WebAppTemplate.Utils;
 using Newtonsoft.Json;
 
-namespace Dalion.Ringor.Serialization {
+namespace Dalion.WebAppTemplate.Serialization {
     public static class PreConfiguredJsonSerializer {
         public static IJsonSerializer Create() {
             return Create(_ => { });

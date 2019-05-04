@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc.ActionConstraints;
 using Microsoft.AspNetCore.Routing;
 using Xunit;
 
-namespace Dalion.Ringor.Constraints {
+namespace Dalion.WebAppTemplate.Constraints {
     public class GetSpaActionConstraintAttributeTests {
         private readonly GetSpaActionConstraintAttribute _sut;
 

@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Reflection;
-using Dalion.Ringor.Api.Models;
+using Dalion.WebAppTemplate.Api.Models;
 using FakeItEasy;
 using FluentAssertions;
 using Microsoft.AspNetCore.Http;
 using Xunit;
 
-namespace Dalion.Ringor.Api.Services {
+namespace Dalion.WebAppTemplate.Api.Services {
     public class ApplicationInfoProviderTests {
         private readonly ImplicitFlowAuthenticationSettings _authenticationSettings;
         private readonly Assembly _entryAssembly;
@@ -18,7 +18,7 @@ namespace Dalion.Ringor.Api.Services {
             _entryAssembly = typeof(Program).Assembly;
             _environment = "UnitTests";
             _authenticationSettings = new ImplicitFlowAuthenticationSettings {
-                Authority = new Uri("https://ringor.eu/auth"),
+                Authority = new Uri("https://webapptemplate.eu/auth"),
                 Tenant = "M2019Tests",
                 ClientId = "theClientId",
                 Scopes = new[] {
@@ -75,7 +75,7 @@ namespace Dalion.Ringor.Api.Services {
             public void ReportsExpectedAuthenticationInfo() {
                 var actual = _sut.Provide();
                 var expectedAuthenticationInfo = new ApplicationInfo.ApplicationAuthenticationInfo {
-                    Authority = new Uri("https://ringor.eu/auth"),
+                    Authority = new Uri("https://webapptemplate.eu/auth"),
                     Tenant = "M2019Tests",
                     ClientId = "theClientId",
                     Scopes = new[] {

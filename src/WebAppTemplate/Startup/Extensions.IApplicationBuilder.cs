@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using Dalion.Ringor.Configuration;
-using Dalion.Ringor.Logging;
+using Dalion.WebAppTemplate.Configuration;
+using Dalion.WebAppTemplate.Logging;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
 
-namespace Dalion.Ringor.Startup {
+namespace Dalion.WebAppTemplate.Startup {
     internal static partial class Extensions {
         public static IApplicationBuilder UseSwagger(this IApplicationBuilder app, AuthenticationSettings authenticationSettings, IApiVersionDescriptionProvider provider) {
             return app
@@ -18,7 +18,7 @@ namespace Dalion.Ringor.Startup {
                         );
                     }
                     options.OAuthClientId(authenticationSettings.Swagger.ClientId);
-                    options.OAuthAppName("Ringor Swagger UI");
+                    options.OAuthAppName("WebAppTemplate Swagger UI");
                     options.OAuthAdditionalQueryStringParams(new Dictionary<string, string> {
                         {"resource", authenticationSettings.AppIdUri}
                     });

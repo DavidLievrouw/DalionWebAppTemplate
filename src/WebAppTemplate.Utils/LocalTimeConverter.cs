@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Dalion.Ringor.Utils {
+namespace Dalion.WebAppTemplate.Utils {
     public class LocalTimeConverter : ILocalTimeConverter {
         private readonly TimeSpan _offsetFromUtc;
 

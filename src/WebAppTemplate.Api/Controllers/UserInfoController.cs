@@ -4,13 +4,13 @@ using System.ComponentModel;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
-using Dalion.Ringor.Api.Models;
-using Dalion.Ringor.Api.Models.Links;
-using Dalion.Ringor.Utils;
+using Dalion.WebAppTemplate.Api.Models;
+using Dalion.WebAppTemplate.Api.Models.Links;
+using Dalion.WebAppTemplate.Utils;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Dalion.Ringor.Api.Controllers {
+namespace Dalion.WebAppTemplate.Api.Controllers {
     [ApiController]
     [ApiVersion("1.0")]
     [Route("api/userinfo")]

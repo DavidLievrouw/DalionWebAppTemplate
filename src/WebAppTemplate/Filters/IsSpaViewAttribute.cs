@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
 
-namespace Dalion.Ringor.Filters {
+namespace Dalion.WebAppTemplate.Filters {
     public class IsSpaViewAttribute : Attribute, IFilterFactory {
         public IFilterMetadata CreateInstance(IServiceProvider serviceProvider) {
             return new IsSpaViewFilter(serviceProvider.GetRequiredService<IFileProvider>());
@@ -24,10 +24,10 @@ namespace Dalion.Ringor.Filters {
                 base.OnActionExecuted(context);
 
                 if (context.Result is ViewResult viewResult) {
-                    viewResult.ViewData[Constants.ViewData.Scripts] = new[] {"App/ringor-bundle.js"}
+                    viewResult.ViewData[Constants.ViewData.Scripts] = new[] {"App/webapptemplate-bundle.js"}
                         .Where(relativePath => _fileProvider.GetFileInfo(relativePath).Exists)
                         .ToList();
-                    viewResult.ViewData[Constants.ViewData.Styles] = new[] {"App/ringor-bundle.css"}
+                    viewResult.ViewData[Constants.ViewData.Styles] = new[] {"App/webapptemplate-bundle.css"}
                         .Where(relativePath => _fileProvider.GetFileInfo(relativePath).Exists)
                         .ToList();
                 }

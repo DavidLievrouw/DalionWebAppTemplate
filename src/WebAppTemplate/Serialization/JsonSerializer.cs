@@ -1,10 +1,10 @@
 using System;
 using System.IO;
 using System.Text;
-using Dalion.Ringor.Utils;
+using Dalion.WebAppTemplate.Utils;
 using Newtonsoft.Json;
 
-namespace Dalion.Ringor.Serialization {
+namespace Dalion.WebAppTemplate.Serialization {
     internal class JsonSerializer : IJsonSerializer {
         private readonly Newtonsoft.Json.JsonSerializer _inner;
 

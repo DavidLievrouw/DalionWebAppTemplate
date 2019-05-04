@@ -2,7 +2,7 @@ using System;
 using Cake.Core;
 using Cake.Core.IO;
 
-namespace Dalion.Ringor.Build.Configuration.FileSystem {
+namespace Dalion.WebAppTemplate.Build.Configuration.FileSystem {
     public class FileSystemProperties : Properties<FileSystemProperties> {
         private readonly AppProperties _container;
 

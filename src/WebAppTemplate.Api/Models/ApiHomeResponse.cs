@@ -1,6 +1,6 @@
-﻿using Dalion.Ringor.Api.Models.Links;
+﻿using Dalion.WebAppTemplate.Api.Models.Links;
 
-namespace Dalion.Ringor.Api.Models {
+namespace Dalion.WebAppTemplate.Api.Models {
     public class ApiHomeResponse : ILinkableResource<ApiHomeResponseHyperlinkType> {
         public ApplicationInfo ApplicationInfo { get; set; }
         public Hyperlink<ApiHomeResponseHyperlinkType>[] Links { get; set; }

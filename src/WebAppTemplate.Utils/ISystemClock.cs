@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Dalion.Ringor.Utils {
+namespace Dalion.WebAppTemplate.Utils {
     public interface ISystemClock {
         DateTimeOffset UtcNow { get; }
         DateTime LocalNow { get; }

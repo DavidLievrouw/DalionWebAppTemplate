@@ -3,7 +3,7 @@ using System.Reflection;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.FileProviders;
 
-namespace Dalion.Ringor.Startup {
+namespace Dalion.WebAppTemplate.Startup {
     public class FakeHostingEnvironment : IHostingEnvironment {
         private static readonly Assembly MainAssembly;
 

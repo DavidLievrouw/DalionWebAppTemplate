@@ -1,6 +1,6 @@
 using System;
 
-namespace Dalion.Ringor.Build {
+namespace Dalion.WebAppTemplate.Build {
     public class TemporaryConsoleColor : IDisposable {
         private readonly ConsoleColor _backupColor;
 

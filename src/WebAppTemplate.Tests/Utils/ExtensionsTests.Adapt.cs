@@ -5,7 +5,7 @@ using FakeItEasy;
 using FluentAssertions;
 using Xunit;
 
-namespace Dalion.Ringor.Utils {
+namespace Dalion.WebAppTemplate.Utils {
     public partial class ExtensionsTests {
         public class AdaptNullable : ExtensionsTests {
             private readonly DateTime? _sampleInput;

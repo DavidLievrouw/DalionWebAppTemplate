@@ -1,6 +1,6 @@
 ﻿using CommandLine;
 
-namespace Dalion.Ringor.Build.Startup {
+namespace Dalion.WebAppTemplate.Build.Startup {
     public class Options {
         [Option('t', "target", Required = false, Default = "Default", HelpText = "The build script target to run.")]
         public string Target { get; set; }

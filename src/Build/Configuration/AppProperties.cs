@@ -1,8 +1,8 @@
 using Cake.Core;
-using Dalion.Ringor.Build.Configuration.Arguments;
-using Dalion.Ringor.Build.Configuration.FileSystem;
+using Dalion.WebAppTemplate.Build.Configuration.Arguments;
+using Dalion.WebAppTemplate.Build.Configuration.FileSystem;
 
-namespace Dalion.Ringor.Build.Configuration {
+namespace Dalion.WebAppTemplate.Build.Configuration {
     public class AppProperties : Properties<AppProperties> {
         public AppProperties(ICakeContext context) : base(context) {
             Arguments = new ArgumentsProperties(context, this);
@@ -11,7 +11,7 @@ namespace Dalion.Ringor.Build.Configuration {
         }
 
         public string WorkingDirectory { get; }
-        public string ProductName { get; } = "Dalion.Ringor";
+        public string ProductName { get; } = "Dalion.WebAppTemplate";
         public string ProductVersion { get; set; } = "1.0.0";
         public string AssemblyVersion { get; set; } = "1.0.0.0";
 

@@ -5,7 +5,7 @@
     <TargetFramework>net471</TargetFramework>
     <Platforms>x64</Platforms>
     <PlatformTarget>x64</PlatformTarget>
-    <RootNamespace>Dalion.Ringor.Build</RootNamespace>
+    <RootNamespace>Dalion.WebAppTemplate.Build</RootNamespace>
     <AssemblyName>Build</AssemblyName>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>

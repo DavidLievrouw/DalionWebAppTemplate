@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Dalion.Ringor.Utils {
+namespace Dalion.WebAppTemplate.Utils {
     public partial class Extensions {
         public static bool IsBetweenInclusive(this IComparable candidate, IComparable left, IComparable right) {
             if (candidate == null) throw new ArgumentNullException(nameof(candidate));

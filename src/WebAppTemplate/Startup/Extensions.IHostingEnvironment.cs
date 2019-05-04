@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 
-namespace Dalion.Ringor.Startup {
+namespace Dalion.WebAppTemplate.Startup {
     internal static partial class Extensions {
         public static bool IsDevelopmentOrDebug(this IHostingEnvironment env) {
             // ReSharper disable once RedundantAssignment

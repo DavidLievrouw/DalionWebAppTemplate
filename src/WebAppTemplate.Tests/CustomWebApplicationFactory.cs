@@ -1,9 +1,9 @@
 ﻿using System;
-using Dalion.Ringor.Startup;
+using Dalion.WebAppTemplate.Startup;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
 
-namespace Dalion.Ringor {
+namespace Dalion.WebAppTemplate {
     public class CustomWebApplicationFactory : WebApplicationFactory<WebHostStartup> {
         protected override IWebHostBuilder CreateWebHostBuilder() {
             var bootstrapperSettings = new BootstrapperSettings {

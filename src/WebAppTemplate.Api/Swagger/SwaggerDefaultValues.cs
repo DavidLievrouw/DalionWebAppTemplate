@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc.Versioning;
 using Swashbuckle.AspNetCore.Swagger;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
-namespace Dalion.Ringor.Api.Swagger {
+namespace Dalion.WebAppTemplate.Api.Swagger {
     public class SwaggerDefaultValues : IOperationFilter {
         public void Apply(Operation operation, OperationFilterContext context) {
             var apiDescription = context.ApiDescription;

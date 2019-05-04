@@ -2,7 +2,7 @@
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace Dalion.Ringor.Api.Models.Links {
+namespace Dalion.WebAppTemplate.Api.Models.Links {
     public class UserInfoResponseLinksCreator : ILinksCreator<UserInfoResponse> {
         private readonly IHyperlinkFactory _hyperlinkFactory;
 

@@ -1,13 +1,13 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Threading.Tasks;
-using Dalion.Ringor.Api.Models;
-using Dalion.Ringor.Api.Models.Links;
-using Dalion.Ringor.Api.Services;
+using Dalion.WebAppTemplate.Api.Models;
+using Dalion.WebAppTemplate.Api.Models.Links;
+using Dalion.WebAppTemplate.Api.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Dalion.Ringor.Api.Controllers {
+namespace Dalion.WebAppTemplate.Api.Controllers {
     [ApiController]
     [ApiVersion("1.0")]
     [Route("api")]

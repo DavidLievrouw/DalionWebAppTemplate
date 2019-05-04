@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using KellermanSoftware.CompareNetObjects;
 
-namespace Dalion.Ringor {
+namespace Dalion.WebAppTemplate {
     public static partial class ExtensionsForT {
         public static bool HasSamePropertyValuesAs<T>(this T first, T second) {
             return HasSamePropertyValuesAs(first, second, false, null);

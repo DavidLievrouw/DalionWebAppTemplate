@@ -3,7 +3,7 @@ using Cake.Common.Tools.DotNetCore.Restore;
 using Cake.Core;
 using Cake.Frosting;
 
-namespace Dalion.Ringor.Build.Tasks.Restore {
+namespace Dalion.WebAppTemplate.Build.Tasks.Restore {
     [TaskName(nameof(RestorePackagesCSharp))]
     public sealed class RestorePackagesCSharp : FrostingTask<Context> {
         public override void Run(Context context) {

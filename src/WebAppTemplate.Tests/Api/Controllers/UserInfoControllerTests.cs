@@ -2,16 +2,16 @@
 using System.Net.Http;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using Dalion.Ringor.Api.Models;
-using Dalion.Ringor.Api.Models.Links;
+using Dalion.WebAppTemplate.Api.Models;
+using Dalion.WebAppTemplate.Api.Models.Links;
 using FakeItEasy;
 using FluentAssertions;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Xunit;
-using Claim = Dalion.Ringor.Api.Models.Claim;
+using Claim = Dalion.WebAppTemplate.Api.Models.Claim;
 
-namespace Dalion.Ringor.Api.Controllers {
+namespace Dalion.WebAppTemplate.Api.Controllers {
     public class UserInfoControllerTests {
         private readonly IClaimLinksCreatorFactory _claimLinksCreatorFactory;
         private readonly UserInfoController _sut;

@@ -1,9 +1,9 @@
 using Cake.Frosting;
 using Cake.Npm;
 using Cake.Npm.RunScript;
-using Dalion.Ringor.Build.Tasks.Restore;
+using Dalion.WebAppTemplate.Build.Tasks.Restore;
 
-namespace Dalion.Ringor.Build.Tasks.Test {
+namespace Dalion.WebAppTemplate.Build.Tasks.Test {
     [TaskName(nameof(UnitTestJs))]
     [Dependency(typeof(InitVersion))]
     [Dependency(typeof(RestorePackages))]

@@ -3,7 +3,7 @@ using FakeItEasy;
 using FluentAssertions;
 using Xunit;
 
-namespace Dalion.Ringor.Utils {
+namespace Dalion.WebAppTemplate.Utils {
     public class RealSystemClockTests {
         private readonly ILocalTimeConverter _localTimeConverter;
         private readonly RealSystemClock _sut;

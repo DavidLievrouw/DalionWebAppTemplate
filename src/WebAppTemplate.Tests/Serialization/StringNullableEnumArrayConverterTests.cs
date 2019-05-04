@@ -2,7 +2,7 @@ using FluentAssertions;
 using Newtonsoft.Json;
 using Xunit;
 
-namespace Dalion.Ringor.Serialization {
+namespace Dalion.WebAppTemplate.Serialization {
     public class StringNullableEnumArrayConverterTests {
         private readonly StringNullableEnumArrayConverter _sut;
 

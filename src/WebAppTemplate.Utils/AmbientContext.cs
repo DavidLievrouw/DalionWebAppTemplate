@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Concurrent;
 
-namespace Dalion.Ringor.Utils {
+namespace Dalion.WebAppTemplate.Utils {
     public abstract class AmbientContext<T> : IDisposable {
         private static readonly ConcurrentStack<AmbientContext<T>> ScopeStack = new ConcurrentStack<AmbientContext<T>>();
         private readonly T _value;

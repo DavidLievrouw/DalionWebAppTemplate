@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Threading.Tasks;
 
-namespace Dalion.Ringor.Utils {
+namespace Dalion.WebAppTemplate.Utils {
     public static partial class Extensions {
         [SuppressMessage("ReSharper", "PossibleMultipleEnumeration")]
         public static Task<IEnumerable<T>> ForEach<T>(this IEnumerable<T> source, Func<T, Task> action) {
