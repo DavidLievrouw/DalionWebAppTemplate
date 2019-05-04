@@ -1,0 +1,53 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <TargetLatestRuntimePatch>true</TargetLatestRuntimePatch>
+    <RootNamespace>Dalion.WebAppTemplate</RootNamespace>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+  </PropertyGroup>
+
+  <Target Name="InitVersion" BeforeTargets="BeforeBuild">
+    <ReadLinesFromFile File="../WebAppTemplate/version.txt">
+      <Output TaskParameter="Lines" PropertyName="ApplicationVersion" />
+    </ReadLinesFromFile>
+    <PropertyGroup>
+      <ProductVersion Condition="'$(ProductVersion)'==''">$(ApplicationVersion).0</ProductVersion>
+      <Version>$(ProductVersion)</Version>
+      <InformationalVersion>$(ProductVersion)</InformationalVersion>
+    </PropertyGroup>
+  </Target>
+
+  <ItemGroup>
+    <Content Include="..\WebAppTemplate\appsettings.Development.json" Link="appsettings.Development.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\WebAppTemplate\appsettings.json" Link="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\WebAppTemplate\appsettings.Production.json" Link="appsettings.Production.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CompareNETObjects" Version="4.58.0" />
+    <PackageReference Include="FakeItEasy" Version="5.1.0" />
+    <PackageReference Include="FluentAssertions" Version="5.6.0" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="2.2.0" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WebAppTemplate.Api\WebAppTemplate.Api.csproj" />
+    <ProjectReference Include="..\WebAppTemplate.Utils\WebAppTemplate.Utils.csproj" />
+    <ProjectReference Include="..\WebAppTemplate\WebAppTemplate.csproj" />
+  </ItemGroup>
+
+</Project>

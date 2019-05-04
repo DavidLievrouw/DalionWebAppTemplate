@@ -1,0 +1,127 @@
+@sidebar-width: 150px;
+@footer-height: 26px;
+@footer-padding: 2px;
+@content-padding: 10px;
+
+/** BEGIN APP WIDE **/
+body {
+  background-color: #DADADA;
+  min-height: 275px;
+  min-width: 500px;
+}
+
+.app {
+  height: 100%;
+}
+
+.app-content {
+  height: 100%;
+  padding-left: @sidebar-width;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: @footer-height;
+}
+
+.app-content .padded-content {
+  padding-left: @content-padding;
+  padding-top: @content-padding;
+  padding-right: @content-padding;
+  padding-bottom: @content-padding;
+}
+
+/** END APP WIDE **/
+
+/** BEGIN COOKIE NAG **/
+
+.cookie.nag {
+  position: relative;
+  z-index: 999;
+}
+
+.cookie.nag.hidden {
+  display: none;
+}
+
+.cookie.nag > .ui.message {
+  position: absolute;
+  left: 50%;
+  top: @content-padding;
+  transform: translateX(-50%);
+}
+
+/** END COOKIE NAG **/
+
+/** BEGIN STICKY FOOTER **/
+
+footer {
+  width: 100%;
+  margin-top: calc(-@footer-height - @footer-padding);
+  position: relative;
+  background-color: #DADADA;
+  padding-left: @sidebar-width;
+  padding-top: @footer-padding;
+  text-align: center;
+  color: darkgray;
+}
+
+/** END STICKY FOOTER **/
+
+/** BEGIN BRANDING **/
+
+.header .company {
+  padding: 30px 10px 30px 10px;
+  border-radius: 0px 15px 0px 15px;
+  margin: 25px 1px 25px 1px;
+  background-color: #2277bb;
+  color: #e7e7e7;
+  font-size: 64px;
+  display: inline-block;
+  text-transform: lowercase;
+}
+
+/** END BRANDING **/
+
+/** BEGIN MENU **/
+
+.fixed-width-menu {
+  width: @sidebar-width !important;
+}
+
+/** END MENU **/
+
+/** BEGIN CONTENTS **/
+
+.fillbox {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+
+.fillbox .row.header {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+}
+
+.fillbox .row.content {
+  display: flex;
+  flex-flow: column;
+  flex: 1 1 auto;
+  overflow-y: auto;
+}
+
+.fillbox .row.footer {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: 40px;
+}
+
+.stretched-horizontally {
+  width: 100%;
+}
+
+.stretched-vertically {
+  height: 100%;
+}
+
+/** END CONTENTS **/

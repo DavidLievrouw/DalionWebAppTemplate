@@ -1,0 +1,19 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "emitBOM": true,
+    "target": "es5",
+    "jsx": "react",
+    "module": "commonjs",
+    "sourceMap": false,
+    "removeComments": true,
+    "noImplicitAny": true,
+    "importHelpers": true,
+    "noEmitHelpers": true,
+    "lib": ["es2018", "dom", "es2015.promise", "es5"],
+    "typeRoots" : ["./typings", "./node_modules/@types/"]
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

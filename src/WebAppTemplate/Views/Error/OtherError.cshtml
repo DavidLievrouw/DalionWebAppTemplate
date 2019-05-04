@@ -1,0 +1,56 @@
+﻿@using Dalion.Ringor
+@using Dalion.Ringor.Api.Models
+@using Microsoft.AspNetCore.WebUtilities
+
+@{
+  ViewData["Title"] = "Invalid request";
+  var statusCode = Context.Response.StatusCode;
+  var reasonPhrase = ReasonPhrases.GetReasonPhrase(Context.Response.StatusCode);
+  var applicationInfo = ViewData[Constants.ViewData.ApplicationInfo] as ApplicationInfo;
+}
+
+<div class="ui middle aligned center aligned full-height padded padded-content grid">
+  <div class="column">
+    <div class="ui huge header">
+      <div class="ui massive company">@(applicationInfo?.Company)</div>
+    </div>
+    <div class="ui padded grid center aligned">
+      <div class="row">
+        <div class="ui big centered card">
+          <div class="content">
+            <div class="header">
+              <i class="yellow exclamation triangle icon"></i> @(statusCode) - @(reasonPhrase)
+            </div>
+            <div class="description">
+              That's an error
+            </div>
+          </div>
+          <div class="extra content">
+            An error has occurred when processing your request.
+          </div>
+        </div>
+      </div>
+      <div class="ui basic vertical segment padded">
+        <table class="ui collapsing definition basic table">
+          <tbody>
+          <tr>
+            <td colspan="2">Additional information for your system administrator</td>
+          </tr>
+          <tr>
+            <td>Time</td>
+            <td>@DateTimeOffset.UtcNow.ToString("R")</td>
+          </tr>
+          <tr>
+            <td>Request Id</td>
+            <td>@Context.TraceIdentifier</td>
+          </tr>
+          <tr>
+            <td>...</td>
+            <td>Details of the error are not shown on this page. Check the server logs for more information.</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+/*******************************
+         Site Overrides
+*******************************/
+
+.ui.grid .column.input {
+  min-width: 275px;
+}
+
+.ui.grid.full-height {
+  height: 100%;
+}

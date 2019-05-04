@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Dalion.WebAppTemplate.Utils</RootNamespace>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+  </PropertyGroup>
+
+  <Target Name="InitVersion" BeforeTargets="BeforeBuild">
+    <ReadLinesFromFile File="..\WebAppTemplate\version.txt">
+      <Output TaskParameter="Lines" PropertyName="ApplicationVersion" />
+    </ReadLinesFromFile>
+    <PropertyGroup>
+      <ProductVersion Condition="'$(ProductVersion)'==''">$(ApplicationVersion).0</ProductVersion>
+      <Version>$(ProductVersion)</Version>
+      <InformationalVersion>$(ProductVersion)</InformationalVersion>
+    </PropertyGroup>
+  </Target>
+
+</Project>
