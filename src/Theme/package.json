@@ -10,8 +10,8 @@
     "build": "cd semantic && gulp build && cd .. && npm run copy",
     "copy": "npm run copy-css && npm run copy-assets && npm run copy-js",
     "copy-css": "xcopy \".\\semantic\\dist\\*.css\" \"..\\WebAppTemplate\\wwwroot\\css\\semantic-ui\\\" /Y",
-    "ensure-assets-directory": "if not exist \"..\\\WebAppTemplate\\wwwroot\\css\\semantic-ui\\themes\\default\\assets\\\" md \"..\\\WebAppTemplate\\wwwroot\\css\\semantic-ui\\themes\\default\\assets\\\"",
-    "copy-assets": "npm run ensure-assets-directory && xcopy \".\\semantic\\dist\\themes\\default\\assets\" \"..\\\WebAppTemplate\\wwwroot\\css\\semantic-ui\\themes\\default\\assets\\\" /Y /s",
-    "copy-js": "xcopy \".\\semantic\\dist\\*.js\" \"..\\\WebAppTemplate\\wwwroot\\js\\\" /Y"
+    "ensure-assets-directory": "if not exist \"..\\WebAppTemplate\\wwwroot\\css\\semantic-ui\\themes\\default\\assets\\\" md \"..\\WebAppTemplate\\wwwroot\\css\\semantic-ui\\themes\\default\\assets\\\"",
+    "copy-assets": "npm run ensure-assets-directory && xcopy \".\\semantic\\dist\\themes\\default\\assets\" \"..\\WebAppTemplate\\wwwroot\\css\\semantic-ui\\themes\\default\\assets\\\" /Y /s",
+    "copy-js": "xcopy \".\\semantic\\dist\\*.js\" \"..\\WebAppTemplate\\wwwroot\\js\\\" /Y"
   }
 }
