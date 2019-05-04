@@ -10,10 +10,10 @@ describe('ApiUrlPasteHandler', () => {
     beforeEach(() => {
       const UrlServiceMock = jest.fn<IUrlService, any[]>(() => ({
         getAbsoluteUrl: jest.fn().mockImplementation((relativeUrl: string): string => {
-          return 'https://dalion.eu/ringor/' + relativeUrl;
+          return 'https://dalion.eu/webapptemplate/' + relativeUrl;
         }),
         getApplicationUrl: jest.fn().mockImplementation((): string => {
-          return 'https://dalion.eu/ringor/';
+          return 'https://dalion.eu/webapptemplate/';
         })
       }));
       urlService = new UrlServiceMock();
@@ -50,22 +50,22 @@ describe('ApiUrlPasteHandler', () => {
     });
 
     test("should strip application url from pasted text", () => {
-      const input = 'https://dalion.eu/ringor/quote/param';
+      const input = 'https://dalion.eu/webapptemplate/quote/param';
       const expected = '/quote/param';
       return expect(apiUrlPasteHandler.sanitizePastedUrl(input))
         .toBe(expected);
     });
 
     test("should strip application url from pasted text, even if nothing is left", () => {
-      const input = 'https://dalion.eu/ringor';
+      const input = 'https://dalion.eu/webapptemplate';
       const expected = '';
       return expect(apiUrlPasteHandler.sanitizePastedUrl(input))
         .toBe(expected);
     });
 
     test("should not strip anythig from pasted text when the application url is not there", () => {
-      const input = 'https://dalionnotdalion.eu/ringor/quote/param';
-      const expected = 'https://dalionnotdalion.eu/ringor/quote/param';
+      const input = 'https://dalionnotdalion.eu/webapptemplate/quote/param';
+      const expected = 'https://dalionnotdalion.eu/webapptemplate/quote/param';
       return expect(apiUrlPasteHandler.sanitizePastedUrl(input))
         .toBe(expected);
     });

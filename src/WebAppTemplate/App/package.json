@@ -1,5 +1,5 @@
 {
-  "name": "ringor",
+  "name": "webapptemplate",
   "version": "1.0.0",
   "sideEffects": [
     "*.less",

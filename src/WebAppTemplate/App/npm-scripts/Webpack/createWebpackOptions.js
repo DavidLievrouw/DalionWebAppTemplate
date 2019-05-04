@@ -7,7 +7,7 @@ const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const TerserPlugin = require('terser-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
-const bundleName = 'ringor-bundle';
+const bundleName = 'webapptemplate-bundle';
 
 module.exports = bundleArguments => {
   const workingDirectory = path.resolve(__dirname, '../../');

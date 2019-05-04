@@ -46,6 +46,15 @@
         "toLower": true
       },
       "replaces": "dalion"
+    },
+    "sourceNameLower": {
+      "type": "generated",
+      "generator": "casing",
+      "parameters": {
+        "source": "name",
+        "toLower": true
+      },
+      "replaces": "webapptemplate"
     }
   }
 }
