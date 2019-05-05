@@ -2,11 +2,15 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>Dalion.WebApp</id>
+    <title>Dalion.WebApp</title>
     <version>$version$</version>
-    <description>
-      Creates a new Dalion Web App.
-    </description>
     <authors>Dalion</authors>
+    <owners>David Lievrouw</owners>
+    <copyright>Created by David Lievrouw, License: MIT</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <description>Contains a solution template, for a boilerplate web application.</description>	
+    <projectUrl>https://github.com/DavidLievrouw/DalionWebAppTemplate</projectUrl>
     <packageTypes>
       <packageType name="Template" />
     </packageTypes>
