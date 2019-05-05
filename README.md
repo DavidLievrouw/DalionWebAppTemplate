@@ -46,3 +46,9 @@ An example:
 ```cmd
 dotnet new dalionwebapp --name DalionWebShop --company Dalion --domain dalion.eu
 ```
+
+## Remove
+
+```cmd
+dotnet new -u Dalion.WebApp
+```
