@@ -52,3 +52,13 @@ dotnet new dalionwebapp --name DalionWebShop --company Dalion --domain dalion.eu
 ```cmd
 dotnet new -u Dalion.WebApp
 ```
+
+## Change log
+
+v1.0.1 - 2019-05-06
+- Update [MSAL](https://www.npmjs.com/package/msal) dependency to v1.0.0.
+- Show PII in logs when debugging.
+- Update README.
+
+v1.0.0 - 2019-05-04
+- Initial release.
