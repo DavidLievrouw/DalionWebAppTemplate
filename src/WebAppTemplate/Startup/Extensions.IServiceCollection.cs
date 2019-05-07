@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Dalion.WebAppTemplate.Api.Controllers;
@@ -70,15 +69,25 @@ namespace Dalion.WebAppTemplate.Startup {
                 .AddJwtBearer(o => {
                     o.Authority = authSettings.SignInEndpoint.WithRelativePath(authSettings.Tenant).AbsoluteUri;
                     o.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters {
-                        ValidAudiences = new [] {
+                        ValidAudiences = new[] {
                             authSettings.AppIdUri,
                             authSettings.ClientId
                         }
                     };
-                    //o.Events = new JwtBearerEvents {
-                    //    OnAuthenticationFailed = ctx => { return System.Threading.Tasks.Task.CompletedTask; },
-                    //    OnTokenValidated = ctx => { return System.Threading.Tasks.Task.CompletedTask; }
-                    //};
+                    o.Events = new JwtBearerEvents {
+                        OnAuthenticationFailed = ctx => {
+                            var token = ctx.Request.GetRawSecurityToken();
+                            if (!string.IsNullOrEmpty(token)) Log.Logger.Debug("Security token received: {0}", token);
+                            Log.Logger.Warning(ctx.Exception, "Authentication by security token failed.");
+                            return System.Threading.Tasks.Task.CompletedTask;
+                        },
+                        OnTokenValidated = ctx => {
+                            var token = ctx.Request.GetRawSecurityToken();
+                            if (!string.IsNullOrEmpty(token)) Log.Logger.Debug("Security token received: {0}", token);
+                            Log.Logger.Debug("Valid security token received for identity {0}.", ctx.Principal?.Identity?.Name ?? "[no identity name]");
+                            return System.Threading.Tasks.Task.CompletedTask;
+                        }
+                    };
                 });
 
             return services;
