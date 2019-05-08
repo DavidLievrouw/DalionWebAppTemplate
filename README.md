@@ -55,6 +55,11 @@ dotnet new -u Dalion.WebApp
 
 ## Change log
 
+v1.0.2 - 2019-05-08
+- Add logging when validating the security token.
+- Split up Publish build target in PublishFTP and PublishWebDeploy.
+- Update README.
+
 v1.0.1 - 2019-05-06
 - Update [MSAL](https://www.npmjs.com/package/msal) dependency to v1.0.0.
 - Show PII in logs when debugging.
