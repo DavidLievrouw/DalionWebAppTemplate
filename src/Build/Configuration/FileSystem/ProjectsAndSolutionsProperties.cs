@@ -14,7 +14,7 @@ namespace Dalion.WebAppTemplate.Build.Configuration.FileSystem {
         public DirectoryPath ProjectDirectory => Context.GetAbsoluteDirectoryPath(_container.FileSystem.SourceDirectory + "/WebAppTemplate");
         public DirectoryPath ReactAppDirectory => Context.GetAbsoluteDirectoryPath(ProjectDirectory + "/App");
         public FilePath ProjectFile => Context.GetAbsoluteFilePath(ProjectDirectory + "/WebAppTemplate.csproj");
-        public DirectoryPath PublishDirectoryAzure => Context.GetAbsoluteDirectoryPath(_container.FileSystem.PublishDirectory + "/Azure");	        
+        public DirectoryPath PublishDirectoryFTP => Context.GetAbsoluteDirectoryPath(_container.FileSystem.PublishDirectory + "/FTP");	        
         public DirectoryPath PublishDirectoryWebDeploy => Context.GetAbsoluteDirectoryPath(_container.FileSystem.PublishDirectory + "/WebDeploy");
     }
 }
