@@ -4,9 +4,9 @@ using Cake.Core.IO;
 
 namespace Dalion.WebAppTemplate.Build.Configuration.FileSystem {
     public class ProjectsAndSolutionsProperties : Properties<ProjectsAndSolutionsProperties> {
-        private readonly Configuration.AppProperties _container;
+        private readonly AppProperties _container;
 
-        public ProjectsAndSolutionsProperties(ICakeContext context, Configuration.AppProperties container) : base(context) {
+        public ProjectsAndSolutionsProperties(ICakeContext context, AppProperties container) : base(context) {
             _container = container ?? throw new ArgumentNullException(nameof(container));
         }
 
@@ -14,7 +14,8 @@ namespace Dalion.WebAppTemplate.Build.Configuration.FileSystem {
         public DirectoryPath ProjectDirectory => Context.GetAbsoluteDirectoryPath(_container.FileSystem.SourceDirectory + "/WebAppTemplate");
         public DirectoryPath ReactAppDirectory => Context.GetAbsoluteDirectoryPath(ProjectDirectory + "/App");
         public FilePath ProjectFile => Context.GetAbsoluteFilePath(ProjectDirectory + "/WebAppTemplate.csproj");
-        public DirectoryPath PublishDirectory => Context.GetAbsoluteDirectoryPath(_container.FileSystem.DistDirectory + "/Publish");
-        public DirectoryPath PublishDirectoryAzure => Context.GetAbsoluteDirectoryPath(PublishDirectory + "/Azure");
+        public DirectoryPath PublishDirectory => Context.GetAbsoluteDirectoryPath(_container.FileSystem.PublishDirectory + "/Publish");
+        public DirectoryPath PublishDirectoryAzure => Context.GetAbsoluteDirectoryPath(PublishDirectory + "/Azure");	        
+        public DirectoryPath PublishDirectoryWebDeploy => Context.GetAbsoluteDirectoryPath(_container.FileSystem.PublishDirectory + "/WebDeploy");
     }
 }

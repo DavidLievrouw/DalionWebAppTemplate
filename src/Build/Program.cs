@@ -37,6 +37,7 @@ namespace Dalion.WebAppTemplate.Build {
             var returnCode = new CakeHostBuilder()
                 .WithArguments(arguments)
                 .UseStartup<FrostingStartup>()
+                .ConfigureServices(services => services.UseWorkingDirectory(localOptions.WorkingDirectory))
                 .Build()
                 .Run();
 

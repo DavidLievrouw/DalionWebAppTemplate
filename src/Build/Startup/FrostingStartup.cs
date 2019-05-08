@@ -5,7 +5,6 @@ namespace Dalion.WebAppTemplate.Build.Startup {
         public void Configure(ICakeServices services) {
             services.UseContext<Context>();
             services.UseLifetime<Lifetime>();
-            services.UseWorkingDirectory(".");
         }
     }
 }

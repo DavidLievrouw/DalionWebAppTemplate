@@ -7,9 +7,9 @@ namespace Dalion.WebAppTemplate.Build.Startup {
             var possibleActions = new (string Label, Action Invoke)[] {
                 ("Quit", o => null),
                 ("Restore packages", RestorePackages),
-                ("Publish", Publish),
-                ("Run unit tests", RunTests),
-                ("Create release", CreateRelease)
+                ("Publish for Azure files", PublishAzureFiles),
+                ("Publish for Web Deploy", PublishWebDeploy),
+                ("Run unit tests", RunTests)
             };
 
             using (new TemporaryConsoleColor(ConsoleColor.Cyan)) {
@@ -37,20 +37,19 @@ namespace Dalion.WebAppTemplate.Build.Startup {
             return options;
         }
 
-        private static Options Publish(Options options) {
-            options.Target = nameof(Tasks.Publish);
+        private static Options PublishAzureFiles(Options options) {
+            options.Target = nameof(Tasks.Publish.PublishAzureFiles);
+            return options;
+        }
+
+        private static Options PublishWebDeploy(Options options) {
+            options.Target = nameof(Tasks.Publish.PublishWebDeploy);
             return options;
         }
 
         private static Options RunTests(Options options) {
             options.Target = nameof(Tasks.Test.UnitTest);
             options.Configuration = ConfigurationOptions.Debug;
-            return options;
-        }
-
-        private static Options CreateRelease(Options options) {            
-            options.Target = nameof(Tasks.CreateRelease);
-            options.Configuration = ConfigurationOptions.Release;
             return options;
         }
 

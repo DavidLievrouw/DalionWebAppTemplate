@@ -19,6 +19,9 @@ namespace Dalion.WebAppTemplate.Build.Startup {
 
         [Option('i', "interactive", Required = false, Default = false, HelpText = "Ask the user interactively for options")]
         public bool Interactive { get; set; }
+        
+        [Option('w', "workingDirectory", Required = false, Default = ".", HelpText = "The working directory of the build process")]
+        public string WorkingDirectory { get; set; }
 
         public Options Clone() {
             return new Options {
@@ -27,7 +30,8 @@ namespace Dalion.WebAppTemplate.Build.Startup {
                 Environment = Environment,
                 Verbosity = Verbosity,
                 Target = Target,
-                PublishDirectory = PublishDirectory
+                PublishDirectory = PublishDirectory,
+                WorkingDirectory = WorkingDirectory
             };
         }
     }
@@ -41,7 +45,7 @@ namespace Dalion.WebAppTemplate.Build.Startup {
         Quiet,
         Minimal,
         Normal,
-        Detailed,
+        Verbose,
         Diagnostic
     }
 
