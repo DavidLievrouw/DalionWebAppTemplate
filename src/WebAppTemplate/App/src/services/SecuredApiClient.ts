@@ -24,24 +24,22 @@ class SecuredApiClient extends ApiClient implements ISecuredApiClient {
         clientId: this.msalConfig.clientId,
         authority: this.msalConfig.authority,
         postLogoutRedirectUri: urlService.getApplicationUrl(),
-        navigateToLoginRequestUrl: false
+        navigateToLoginRequestUrl: true
       },
       cache: {
         cacheLocation: "localStorage",
         storeAuthStateInCookie: false
       }
     });
-    this.userAgentApplication.handleRedirectCallback(this.authCallback.bind(this));
-  }
-
-  authCallback(authErr: Msal.AuthError, response?: Msal.AuthResponse) {
-    if (authErr) {
-      console.log('Authentication failed.');
-      throw authErr;
-    }
-    if (response) {
-      console.log('Authentication succeeded.');
-    }
+    this.userAgentApplication.handleRedirectCallback(
+      tokenResponse => {
+        console.log('Token acquisition succeeded: ' + tokenResponse.account.userName + '.');
+      },
+      errorResponse => {
+        const errorMessage = errorResponse.errorMessage;
+        console.error('Access token acquisition for web extension failed: ' + (errorMessage || errorResponse ));
+        throw errorResponse;
+      });
   }
 
   getAccount() {
