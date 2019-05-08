@@ -1,5 +1,8 @@
 # [Dalion](https://www.dalion.eu) WebApp template
 
+## Status
+[![NuGet Status](http://img.shields.io/nuget/v/Dalion.WebApp.svg?style=flat-square)](https://www.nuget.org/packages/Dalion.WebApp/)
+
 ## Introduction
 This repository contains a solution template, for a boilerplate web application:
 - .NET Core 2.2 MVC app
