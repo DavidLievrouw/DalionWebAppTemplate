@@ -8,5 +8,9 @@
             public const string Scope = "http://schemas.microsoft.com/identity/claims/scope";
             public const string Role = "http://schemas.microsoft.com/ws/2008/06/identity/claims/role";
         }
+
+        public static class AuthorizationPolicies {
+            public const string RequireApiAccess = "RequireApiAccess";
+        }
     }
 }

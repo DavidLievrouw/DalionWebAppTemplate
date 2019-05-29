@@ -64,8 +64,8 @@ namespace Dalion.WebAppTemplate.Startup {
                 })
                 .AddSingleton<IAuthorizationHandler, PermissionRequirementHandler>()
                 .AddAuthorization(options => {
-                    options.AddPolicy(AuthorizationPolicies.RequireApiAccess, policy => policy.RequirePermissions(new[] { Api.Security.Constants.Scopes.ApiFullAccess }));
-                    options.DefaultPolicy = options.GetPolicy(AuthorizationPolicies.RequireApiAccess);
+                    options.AddPolicy(Api.Security.Constants.AuthorizationPolicies.RequireApiAccess, policy => policy.RequirePermissions(new[] { Api.Security.Constants.Scopes.ApiFullAccess }));
+                    options.DefaultPolicy = options.GetPolicy(Api.Security.Constants.AuthorizationPolicies.RequireApiAccess);
                 })
                 .AddAuthentication(o => { o.DefaultScheme = JwtBearerDefaults.AuthenticationScheme; })
                 .AddJwtBearer(o => {
