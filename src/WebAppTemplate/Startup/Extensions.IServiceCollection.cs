@@ -11,6 +11,7 @@ using Dalion.WebAppTemplate.Logging;
 using Dalion.WebAppTemplate.Serialization;
 using Dalion.WebAppTemplate.Utils;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -61,8 +62,9 @@ namespace Dalion.WebAppTemplate.Startup {
                     Authority = authSettings.SignInEndpoint.WithRelativePath(authSettings.Tenant),
                     Scopes = authSettings.Scopes?.Distinct().ToArray()
                 })
+                .AddSingleton<IAuthorizationHandler, PermissionRequirementHandler>()
                 .AddAuthorization(options => {
-                    options.AddPolicy(AuthorizationPolicies.RequireApiAccess, policy => policy.RequireClaim(ClaimTypes.Scope, "Api.FullAccess"));
+                    options.AddPolicy(AuthorizationPolicies.RequireApiAccess, policy => policy.RequirePermissions(new[] { Scopes.ApiFullAccess }));
                     options.DefaultPolicy = options.GetPolicy(AuthorizationPolicies.RequireApiAccess);
                 })
                 .AddAuthentication(o => { o.DefaultScheme = JwtBearerDefaults.AuthenticationScheme; })
