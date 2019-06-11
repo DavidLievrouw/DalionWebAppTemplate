@@ -58,6 +58,19 @@ dotnet new -u Dalion.WebApp
 
 ## Change log
 
+v1.0.4 - 2019-06-11
+- Less magic strings.
+- Refactor and improve the custom authorization policy handlers.
+- Update README.
+
+v1.0.3 - 2019-05-29
+- Rename PublishAzure publish profile to PublishFTP.
+- Slight improvement to the user interaction detection in the MSAL library.
+- Fixed invalid API url in the front-end.
+- Fixed front-end app state refresh after login using redirect.
+- Fixed authorization so that multiple scopes are allowed, and add logging.
+- Update README.
+
 v1.0.2 - 2019-05-08
 - Add logging when validating the security token.
 - Split up Publish build target in PublishFTP and PublishWebDeploy.
