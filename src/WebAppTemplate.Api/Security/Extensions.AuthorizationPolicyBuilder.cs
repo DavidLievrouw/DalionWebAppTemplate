@@ -1,16 +1,44 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using System;
+using System.Linq;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Dalion.WebAppTemplate.Api.Security {
     public static class AuthorizationPolicyBuilderExtensions {
-        public static void RequirePermissions(
+        public static AuthorizationPolicyBuilder RequireDelegatedPermissions(
             this AuthorizationPolicyBuilder builder,
-            string[] delegated,
-            string[] application = null) {
-            builder.RequireAuthenticatedUser();
-            builder.Requirements.Add(new PermissionRequirement {
-                DelegatedPermissions = delegated,
-                ApplicationPermissions = application ?? new string[0]
-            });
+            DelegatedPermissionRequirement requirement) {
+            if (requirement == null) throw new ArgumentNullException(nameof(requirement));
+            builder.Requirements.Add(requirement);
+            return builder;
+        }
+
+        public static AuthorizationPolicyBuilder RequireApplicationPermissions(
+            this AuthorizationPolicyBuilder builder,
+            ApplicationPermissionRequirement requirement) {
+            if (requirement == null) throw new ArgumentNullException(nameof(requirement));
+            builder.Requirements.Add(requirement);
+            return builder;
+        }
+
+        public static AuthorizationPolicyBuilder RequireDelegatedPermissions(
+            this AuthorizationPolicyBuilder builder,
+            params string[] delegated) {
+            builder.Requirements.Add(new DelegatedPermissionRequirement {Permissions = delegated});
+            return builder;
+        }
+
+        public static AuthorizationPolicyBuilder RequireApplicationPermissions(
+            this AuthorizationPolicyBuilder builder,
+            params string[] application) {
+            builder.Requirements.Add(new ApplicationPermissionRequirement {Permissions = application});
+            return builder;
+        }
+
+        public static AuthorizationPolicyBuilder Any(this AuthorizationPolicyBuilder builder, Action<AuthorizationPolicyBuilder> configAction) {
+            var subBuilder = new AuthorizationPolicyBuilder();
+            configAction(subBuilder);
+            builder.AddRequirements(new AnyRequirement(subBuilder.Requirements.OfType<IAuthorizationHandler>().ToArray()));
+            return builder;
         }
     }
 }
