@@ -58,6 +58,11 @@ dotnet new -u Dalion.WebApp
 
 ## Change log
 
+v1.0.5 - 2019-06-18
+- The Api project now also targets netcoreapp2.2.
+- When configuring services during webhost configuration, read configuration from the current webhost context, instead of the configuration that was built on startup.
+- Update README.
+
 v1.0.4 - 2019-06-11
 - Less magic strings.
 - Refactor and improve the custom authorization policy handlers.
