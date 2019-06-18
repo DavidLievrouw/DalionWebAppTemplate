@@ -67,12 +67,12 @@ namespace Dalion.WebAppTemplate.Startup {
                 .CaptureStartupErrors(true)
                 .UseSetting(WebHostDefaults.DetailedErrorsKey, settings.UseDetailedErrors.ToString())
                 .UseConfiguration(configuration)
-                .ConfigureServices((context, s) => {
-                    s.AddSingleton(configuration);
-                    s.AddSingleton(settings);
+                .ConfigureServices((context, services) => {
+                    services.AddSingleton(context.Configuration);
+                    services.AddSingleton(settings);
                 })
                 .UseStartup<WebHostStartup>()
-                .ConfigureServices((ctx, s) => Composition.ConfigureServices(s, ctx.HostingEnvironment, configuration, settings))
+                .ConfigureServices((context, services) => Composition.ConfigureServices(services, context.HostingEnvironment, context.Configuration, settings))
                 .UseSerilog();
         }
 
