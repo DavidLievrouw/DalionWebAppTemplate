@@ -67,6 +67,7 @@ namespace Dalion.WebAppTemplate.Startup {
                 .CaptureStartupErrors(true)
                 .UseSetting(WebHostDefaults.DetailedErrorsKey, settings.UseDetailedErrors.ToString())
                 .UseConfiguration(configuration)
+                .ConfigureAppConfiguration((context, config) => context.HostingEnvironment.EnvironmentName = settings.EnvironmentName)
                 .ConfigureServices((context, services) => {
                     services.AddSingleton(context.Configuration);
                     services.AddSingleton(settings);
