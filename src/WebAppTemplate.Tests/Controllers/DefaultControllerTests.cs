@@ -52,10 +52,6 @@ namespace Dalion.WebAppTemplate.Controllers {
             [InlineData("/ApiNav")]
             [InlineData("/apinav?debug=true")]
             [InlineData("/apinav/?debug=true")]
-            [InlineData("/home")]
-            [InlineData("/home/")]
-            [InlineData("/home?debug=true")]
-            [InlineData("/home/?debug=true")]
             public async Task MatchesWildcardRoutes(string url) {
                 var response = await _client.GetAsync(url);
                 response.Should().Match<HttpResponseMessage>(_ => IsCallToSPA(_));
