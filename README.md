@@ -58,6 +58,12 @@ dotnet new -u Dalion.WebApp
 
 ## Change log
 
+v1.0.6 - 2019-07-14
+- Got rid of wildcard template matching in DefaultController. Too obscure for some people. Hard-coding the routes feels less clean, but at least everyone understands.
+- Fix an Azure AD login issue, after another of their unannounced breaking changes.
+- Update all npm packages in front-end.
+- Update README.
+
 v1.0.5 - 2019-06-18
 - The Api project now also targets netcoreapp2.2.
 - When configuring services during webhost configuration, read configuration from the current webhost context, instead of the configuration that was built on startup.
