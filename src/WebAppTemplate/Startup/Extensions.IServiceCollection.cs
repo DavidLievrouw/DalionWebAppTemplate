@@ -1,7 +1,6 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
-using Dalion.WebAppTemplate.Api.Controllers;
 using Dalion.WebAppTemplate.Api.Models.Links;
 using Dalion.WebAppTemplate.Api.Security;
 using Dalion.WebAppTemplate.Api.Services;
@@ -108,8 +107,10 @@ namespace Dalion.WebAppTemplate.Startup {
                     var pathToContentRoot = Path.GetDirectoryName(pathToEntryAssembly);
                     var assemblyName = Path.GetFileNameWithoutExtension(pathToEntryAssembly);
                     options.IncludeXmlComments(Path.Combine(pathToContentRoot, assemblyName + ".xml"));
-                    var apiAssemblyName = Path.GetFileNameWithoutExtension(typeof(DefaultController).Assembly.Location);
-                    options.IncludeXmlComments(Path.Combine(pathToContentRoot, apiAssemblyName + ".xml"));
+                    var apiAssemblyName = Path.GetFileNameWithoutExtension(typeof(Api.Controllers.DefaultController).Assembly.Location);
+                    var xmlFile = Path.Combine(pathToContentRoot, apiAssemblyName + ".xml");
+                    options.IncludeXmlComments(xmlFile);
+                    options.IncludeControllerDisplayNameAndDescription(xmlFile);
                     options.DescribeAllEnumsAsStrings();
                     options.DescribeStringEnumsInCamelCase();
 

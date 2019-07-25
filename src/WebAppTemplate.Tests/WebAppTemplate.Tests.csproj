@@ -20,14 +20,19 @@
   </Target>
 
   <ItemGroup>
-    <Content Include="..\WebAppTemplate\appsettings.Development.json" Link="appsettings.Development.json">
+    <Content Include="..\WebAppTemplate\appsettings.Development.json">
+      <Link>appsettings.Development.json</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <DependentUpon>appsettings.json</DependentUpon>
+    </Content>
+    <Content Include="..\WebAppTemplate\appsettings.json">
+      <Link>appsettings.json</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="..\WebAppTemplate\appsettings.json" Link="appsettings.json">
+    <Content Include="..\WebAppTemplate\appsettings.Production.json">
+      <Link>appsettings.Production.json</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\WebAppTemplate\appsettings.Production.json" Link="appsettings.Production.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <DependentUpon>appsettings.json</DependentUpon>
     </Content>
   </ItemGroup>
 
