@@ -58,6 +58,11 @@ dotnet new -u Dalion.WebApp
 
 ## Change log
 
+v1.0.7 - 2019-07-25
+- Allow DisplayName and Description for Controllers in Swagger docs.
+- Housekeeping in .csproj files.
+- Update README.
+
 v1.0.6 - 2019-07-14
 - Got rid of wildcard template matching in DefaultController. Too obscure for some people. Hard-coding the routes feels less clean, but at least everyone understands.
 - Fix an Azure AD login issue, after another of their unannounced breaking changes.
